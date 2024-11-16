@@ -6,7 +6,7 @@ const HeroSection = () => {
     {
       id: 1,
       name: 'Esme and Ralda',
-      image: 'https://placekitten.com/300/200', // Replace with actual image URLs
+      image: 'https://media.4-paws.org/9/c/9/7/9c97c38666efa11b79d94619cc1db56e8c43d430/Molly_006-2829x1886-2726x1886-1920x1328.jpg', // Replace with actual image URLs
     },
     {
       id: 2,
@@ -31,6 +31,16 @@ const HeroSection = () => {
     {
       id: 6,
       name: 'Jack and Daniel',
+      image: 'https://placekitten.com/305/200',
+    },
+    {
+      id: 7,
+      name: 'Jacquile',
+      image: 'https://placekitten.com/305/200',
+    },
+    {
+      id: 8,
+      name: 'Bean',
       image: 'https://placekitten.com/305/200',
     },
   ];
@@ -104,37 +114,38 @@ const HeroSection = () => {
               
             ))}
           </div>
-          <div className="text-center mb-8">
-          <h2 className="m-10vh text-6xl font-semibold text-white mb-2">
-            Who are waiting for You?
-          </h2>
-          <p className="text-2.5xl text-sm text-white">
-            If you want to know more about a pet, just click on its box.
-          </p>
-        </div>
+          <div className="text-center mt-[20vh] mb-[15vh]">
+            <h2 className="text-6xl font-semibold text-white mb-4">
+              Who are waiting for You?
+            </h2>
+            <p className="text-3xl text-white mb-12">
+              If you want to know more about a pet, just click on its box.
+            </p>
+          </div>
 
-        {/* Pet Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
-          {pets.map((pet) => (
-            <div
-              key={pet.id}
-              className="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-lg transition-shadow cursor-pointer"
-            >
-              <div className="aspect-[3/2] overflow-hidden">
-                <img
-                  src={pet.image}
-                  alt={pet.name}
-                  className="w-full h-full object-cover"
-                />
+          {/* Pet Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-[7.5vh] mb-8">
+            {pets.map((pet) => (
+              <div
+                key={pet.id}
+                className="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-lg transition-shadow cursor-pointer"
+              >
+                <div className="aspect-[3/2] overflow-hidden">
+                  <img
+                    src={pet.image}
+                    alt={pet.name}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div className="p-4">
+                  <h3 className="text-gray-800 text-center font-medium">
+                    {pet.name}
+                  </h3>
+                </div>
               </div>
-              <div className="p-4">
-                <h3 className="text-gray-800 text-center font-medium">
-                  {pet.name}
-                </h3>
-              </div>
-            </div>
-          ))}
-        </div>
+            ))}
+          </div>
+
         
       </div>
       

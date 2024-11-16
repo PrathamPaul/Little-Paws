@@ -9,17 +9,7 @@ function App() {
 
   return (
     <>
-    {/* <Router>
-      <Navbar />
-      <Routes>
-        <Route exact path="/" component={() => <h2>Home Page</h2>} />
-        <Route path="/about" component={() => <h2>About Page</h2>} />
-        <Route path="/services" component={() => <h2>Services Page</h2>} />
-        <Route path="/contact" component={() => <h2>Contact Page</h2>} />
-      </Routes>
-    </Router> */}
     <HeroSection/>
-    {/* <MainPetGridSection/> */}
     </>
   );
 };
